@@ -2,7 +2,8 @@ import Quickshell
 import Quickshell.Services.Mpris
 import QtQuick
 import QtQuick.Layouts
-import "."
+import ".."
+import "../OSD"
 
 Item {
     id: root

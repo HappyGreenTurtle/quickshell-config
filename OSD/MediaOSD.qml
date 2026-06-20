@@ -1,7 +1,7 @@
 import Quickshell
 import QtQuick
 import QtQuick.Layouts
-import "."
+import ".."
 
 PopupWindow {
     id: osdWindow

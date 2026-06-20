@@ -1,6 +1,8 @@
 import Quickshell
 import Quickshell.Io
 import QtQuick
+import ".."
+import "../OSD"
 
 Item {
     id: root

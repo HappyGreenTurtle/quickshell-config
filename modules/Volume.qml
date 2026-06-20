@@ -3,7 +3,8 @@ import Quickshell.Io
 import QtQuick
 import QtQuick.Layouts
 import Quickshell.Services.Pipewire
-import "."
+import ".."
+import "../OSD"
 
 Item {
     id: root

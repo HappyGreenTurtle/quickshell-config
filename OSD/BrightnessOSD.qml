@@ -1,7 +1,7 @@
 import Quickshell
 import QtQuick
 import QtQuick.Layouts
-import "."
+import ".."
 
 // BrightnessOSD.qml — mirrors VolumeOSD pattern exactly
 PopupWindow {

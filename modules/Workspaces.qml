@@ -2,6 +2,8 @@ import Quickshell
 import Quickshell.Hyprland
 import QtQuick
 import QtQuick.Layouts
+import "../OSD"
+import ".."
 
 // ─────────────────────────────────────────────
 //  Workspaces.qml  –  Hyprland IPC workspace pills
@@ -51,7 +53,7 @@ Item {
         width: wsRow.width
         height: theme.wsHeight
 
-        // ANIMATION ACCENT: Sliding background pill tracking activeId
+        // Animation Accent: Sliding background pill tracking activeId
         Rectangle {
             id: activeIndicator
             width: theme.wsWidth
