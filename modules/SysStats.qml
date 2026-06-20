@@ -3,6 +3,7 @@ import Quickshell.Io
 import QtQuick
 import QtQuick.Layouts
 import ".."
+import "../OSD"
 
 Item {
     id: root
@@ -88,7 +89,6 @@ Item {
         interval: theme.statsInterval
         running:  true; repeat: true; triggeredOnStart: true
         onTriggered: {
-            // FIX: Replaced broken .start() calls with safe property bindings
             statProc.running = true
             memProc.running = true
             uptimeProc.running = true
@@ -164,14 +164,12 @@ Item {
             border.color: Qt.rgba(0.09, 0.58, 0.82, 0.3)
             height: osdCol.implicitHeight + 24
 
-            // FIX: Removed offset entirely to lock it dead-center between both pills
             anchors.horizontalCenter: parent.horizontalCenter
 
             opacity: statsOsd.osdVisible ? 1.0 : 0.0
             scale:   statsOsd.osdVisible ? 1.0 : 0.93
             
-            // FIX: Changed open target from 14 to 24 to push the OSD lower down
-	    y:       statsOsd.osdVisible ? 6 : -40
+	          y:       statsOsd.osdVisible ? 6 : -40
 
             Behavior on opacity { NumberAnimation { duration: 200; easing.type: Easing.OutCubic } }
             Behavior on scale   { NumberAnimation { duration: 200; easing.type: Easing.OutBack  } }

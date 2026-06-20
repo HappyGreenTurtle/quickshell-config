@@ -21,7 +21,6 @@ ShellRoot {
             anchors.left: true
             anchors.right: true
 
-            // ❗ FIX: PanelWindow uses implicitHeight, not height
             implicitHeight: theme.barHeight
 
             color: "transparent"
@@ -37,8 +36,6 @@ ShellRoot {
                 color: theme.bgBar
                 radius: theme.barRadius
 
-                // ❗ FIX: don't animate y on a child anchored item
-                // instead animate opacity + transform-safe movement
                 opacity: 0.0
                 Component.onCompleted: slideIn.start()
 
