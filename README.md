@@ -1,10 +1,12 @@
 # Quickshell Hyprland Bar
 
+> **Note:** Screenshots coming soon.
+
 A modular, feature-rich status bar for [Hyprland](https://hyprland.org/), built with [Quickshell](https://github.com/Quickshell/Quickshell) — a Qt Quick / QML desktop shell framework.
 
 ## Features
 
-**Two layout styles** — switch at runtime via `./switch-layout.sh`:
+**Two layout styles** — switch layouts with a single keybind via `./switch-layout.sh`:
 
 | Layout | Description |
 |--------|-------------|
@@ -24,7 +26,7 @@ A modular, feature-rich status bar for [Hyprland](https://hyprland.org/), built 
 | Battery | `modules/Battery.qml` | Battery level + time remaining, low-battery pulse animation |
 | Network | `modules/Network.qml` | WiFi SSID + signal strength via `nmcli` |
 
-**7 on-screen display (OSD) popups** — glassmorphism-styled, anchored to their parent pill:
+**7 on-screen display (OSD) popups** - anchored to their parent pill:
 
 - VolumeOSD, BrightnessOSD — auto-dismiss (1.4–1.6s)
 - NetworkOSD — auto-dismiss (2.2s)
@@ -48,11 +50,18 @@ When you run `switch-layout.sh`:
 4. Updates `shell.qml` to point to the new layout file
 5. Relaunches quickshell with `-c ~/.config/quickshell`
 
-This makes it trivial to bind to a keybind in Hyprland:
+This makes it trivial to bind to a keybind in the hyprland.lua:
+
+```
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("~/.config/quickshell/switch-layout.sh"))
+```
+
+and for the depricated hyperland.conf
 
 ```
 bind = $mod, B, exec, ~/.config/quickshell/switch-layout.sh
 ```
+
 
 ## Dependencies
 
@@ -65,11 +74,19 @@ bind = $mod, B, exec, ~/.config/quickshell/switch-layout.sh
 | `brightnessctl` | Backlight control |
 | Linux `/sys`, `/proc` | Battery, backlight, CPU/RAM/uptime |
 
+## Tested On
+
+- Arch Linux
+- [Hyprland](https://hyprland.org/)
+- [Quickshell](https://github.com/Quickshell/Quickshell)
+- Pipewire + WirePlumber
+- NetworkManager
+
 ## Installation
 
 ```bash
 # Clone into your quickshell config directory
-git clone https://github.com/YOUR_USER/quickshell-config ~/.config/quickshell
+git clone https://github.com/HappyGreenTurtle/quickshell-config ~/.config/quickshell
 
 # Launch
 quickshell -c ~/.config/quickshell/shell.qml
@@ -136,6 +153,29 @@ Key design tokens:
     └── VolumeOSD.qml      # Volume slider OSD popup
 ```
 
+## Why?
+
+I wanted a bar that could switch between a traditional full-width layout and a more minimal floating pill design without maintaining separate Quickshell configurations.
+
+The project focuses on:
+- modular widgets
+- smooth animations (320ms OutCubic)
+- clean QML architecture
+- easy customization via [`Theme.qml`](Theme.qml)
+
+## Roadmap
+
+- [ ] Workspace previews
+- [ ] Bluetooth widget
+- [ ] Server Uptime widget
+- [ ] Weather widget
+- [ ] Runtime layout switching without restart
+- [ ] Multi-monitor support improvements
+
+## About
+
+This is my first Quickshell project and an ongoing experiment in building desktop UI with QML and Hyprland.
+
 ## License
 
-[MIT](LICENSE)
+Licensed under the MIT License.
