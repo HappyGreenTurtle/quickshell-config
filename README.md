@@ -67,7 +67,7 @@ bind = $mod, B, exec, ~/.config/quickshell/switch-layout.sh
 
 | Runtime | Purpose |
 |---------|---------|
-| [quickshell][(https://quickshell.org/docs/v0.3.0/guide/install-setup/) | QML shell framework |
+| [quickshell](https://quickshell.org/docs/v0.3.0/guide/install-setup/) | QML shell framework |
 | [Hyprland](https://hypr.land/) | Wayland compositor |
 | Pipewire + wireplumber | Audio backend |
 | NetworkManager (`nmcli`) | WiFi scanning |
