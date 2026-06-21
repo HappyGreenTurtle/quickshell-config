@@ -2,7 +2,7 @@ import Quickshell
 import Quickshell.Hyprland
 import QtQuick
 import QtQuick.Layouts
-import "."
+import ".."
 
 // ── thin vertical separator ───────────────────────────────────────────
 Rectangle {
