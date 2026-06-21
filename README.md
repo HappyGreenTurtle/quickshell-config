@@ -2,7 +2,7 @@
 
 > **Note:** Screenshots coming soon.
 
-A modular, feature-rich status bar for [Hyprland](https://hyprland.org/), built with [Quickshell](https://github.com/Quickshell/Quickshell) — a Qt Quick / QML desktop shell framework.
+A modular, feature-rich status bar for [Hyprland](https://hypr.land/), built with [Quickshell](https://quickshell.org/docs/v0.3.0/guide/install-setup/) — a Qt Quick / QML desktop shell framework.
 
 ## Features
 
@@ -67,8 +67,8 @@ bind = $mod, B, exec, ~/.config/quickshell/switch-layout.sh
 
 | Runtime | Purpose |
 |---------|---------|
-| [quickshell](https://github.com/Quickshell/Quickshell) | QML shell framework |
-| [Hyprland](https://hyprland.org/) | Wayland compositor |
+| [quickshell][(https://quickshell.org/docs/v0.3.0/guide/install-setup/) | QML shell framework |
+| [Hyprland](https://hypr.land/) | Wayland compositor |
 | Pipewire + wireplumber | Audio backend |
 | NetworkManager (`nmcli`) | WiFi scanning |
 | `brightnessctl` | Backlight control |
@@ -77,8 +77,8 @@ bind = $mod, B, exec, ~/.config/quickshell/switch-layout.sh
 ## Tested On
 
 - Arch Linux
-- [Hyprland](https://hyprland.org/)
-- [Quickshell](https://github.com/Quickshell/Quickshell)
+- [Hyprland](https://hypr.land/)
+- [Quickshell](https://quickshell.org/docs/v0.3.0/guide/install-setup/)
 - Pipewire + WirePlumber
 - NetworkManager
 
